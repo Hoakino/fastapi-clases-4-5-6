@@ -8,9 +8,9 @@ from pydantic import BaseModel, Field
 app = FastAPI(title="Backend TICs: clases 4, 5 y 6")
 
 # CLASE 4: primeras rutas y parámetros de ruta
-@app.get("/")
-def inicio():
-    return {"Hola": "Mundo"}
+   @app.get("/")
+   def inicio():
+       return {"Hola": "Mundo", "version": 2}
 
 @app.get("/items/{item}")
 def consultar_item(item: str):
